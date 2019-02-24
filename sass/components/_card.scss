@@ -1,0 +1,36 @@
+.flashcard {
+  perspective:150rem;
+  -moz-perspective:150rem;
+  position: relative;
+  height: 15rem;
+  width:25rem;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+
+
+  &.flip{
+    transform: rotateY(180deg);
+  }
+
+  &__side{
+    background-color: $color-white;
+    height: 15rem;
+    border: 1px solid black;
+    width: 100%;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      background-color: $color-white;
+      transform: rotateY(180deg);
+    }
+  }
+
+}
