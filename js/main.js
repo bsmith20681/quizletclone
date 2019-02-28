@@ -30,7 +30,8 @@ addInputField.addEventListener('click', function() {
 
 //make array apppear on screen
 
-var testArray = [];
+var flashcardFront = [];
+var flashcardBack = [];
 
 var number = 0;
 
@@ -39,19 +40,25 @@ var rightArrow = document.getElementById('rightArrow');
 var testField = document.getElementById('testField')
 
 btn.addEventListener('click', function(){
-  testArray.push(input1.value);
-  flashcard__front.innerHTML = testArray[0];
-  docment.getElementById('form1').reset();
+  flashcardFront.push(input1.value);
+  flashcardBack.push(input2.value);
+
+  flashcard__front.innerHTML = flashcardFront[0];
+  flashcard__back.innerHTML = flashcardBack[0];
+
+
 })
 
 rightArrow.addEventListener('click', function(){
-  if (number < testArray.length - 1){
+  if (number < flashcardFront.length - 1 && number < flashcardBack.length - 1){
     number++;
   } else {
     number = 0
   }
   console.log(number);
-  document.getElementById('flashcard__front').innerHTML = testArray[number];
+  document.getElementById('flashcard__front').innerHTML = flashcardFront[number];
+  document.getElementById('flashcard__back').innerHTML = flashcardBack[number];
+
 });
 
 
@@ -60,13 +67,15 @@ rightArrow.addEventListener('click', function(){
 var leftArrow = document.getElementById('leftArrow');
 
 leftArrow.addEventListener('click', function(){
-  if (number > testArray.length){
+  if (number > flashcardFront.length && number > flashcardBack.length){
     number--;
   } else {
     number = 0
   }
   console.log(number);
-  document.getElementById('flashcard__front').innerHTML = testArray[number];
+  document.getElementById('flashcard__front').innerHTML = flashcardFront[number];
+  document.getElementById('flashcard__back').innerHTML = flashcardBack[number];
+
 });
 
 
