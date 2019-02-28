@@ -26,3 +26,34 @@ var addInputField = document.getElementById('addInputField');
 addInputField.addEventListener('click', function() {
   textOnCard.insertAdjacentHTML("afterend", inputHtml)
 });
+
+
+//make array apppear on screen
+
+var testArray = ["xbox", "playstation", "gamecube"]
+
+var number = 0;
+
+var rightArrow = document.getElementById('rightArrow');
+
+rightArrow.addEventListener('click', function(){
+  number++;
+  console.log(number);
+
+  document.getElementById('testField').innerHTML = testArray[number];
+});
+
+var leftArrow = document.getElementById('leftArrow');
+
+leftArrow.addEventListener('click', function(){
+  number--;
+  console.log(number);
+
+  document.getElementById('testField').innerHTML = testArray[number];
+});
+
+
+
+
+
+document.getElementById('testField').innerHTML = testArray[number];
