@@ -30,30 +30,45 @@ addInputField.addEventListener('click', function() {
 
 //make array apppear on screen
 
-var testArray = ["xbox", "playstation", "gamecube"]
+var testArray = [];
 
 var number = 0;
 
 var rightArrow = document.getElementById('rightArrow');
 
-rightArrow.addEventListener('click', function(){
-  number++;
-  console.log(number);
+var testField = document.getElementById('testField')
 
-  document.getElementById('testField').innerHTML = testArray[number];
+btn.addEventListener('click', function(){
+  testArray.push(input1.value);
+  flashcard__front.innerHTML = testArray[0];
+  docment.getElementById('form1').reset();
+})
+
+rightArrow.addEventListener('click', function(){
+  if (number < testArray.length - 1){
+    number++;
+  } else {
+    number = 0
+  }
+  console.log(number);
+  document.getElementById('flashcard__front').innerHTML = testArray[number];
 });
+
+
+
 
 var leftArrow = document.getElementById('leftArrow');
 
 leftArrow.addEventListener('click', function(){
-  number--;
+  if (number > testArray.length){
+    number--;
+  } else {
+    number = 0
+  }
   console.log(number);
-
-  document.getElementById('testField').innerHTML = testArray[number];
+  document.getElementById('flashcard__front').innerHTML = testArray[number];
 });
 
 
 
-
-
-document.getElementById('testField').innerHTML = testArray[number];
+//document.getElementById('testField').innerHTML = testArray[number];
