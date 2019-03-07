@@ -1,0 +1,16 @@
+
+
+.input {
+  border: none;
+  width: 30rem;
+  height: 2.5rem;
+  outline: none;
+  background: white;
+  color: black;
+  font-size: 18px;
+  border-bottom: 2px solid black;
+  margin: 2rem;
+  &-box {
+    background: white;
+  }
+}

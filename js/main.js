@@ -43,11 +43,11 @@ $(textOnCard).on('click', function(){
 
 
 //CREATES A NEW INPUT FIELD
-var inputHtml = '<div class="container mt-5"><div class="row"><div class="col-lg-12 text-center"><div><input type="text" class="form1">'+ ' ' + '<input type="text" class="form2">' + ' ' + '</div></div></div>'
-
+var inputHtml = '<div class="container mt-5"><div class="row input-box"><div class="col-lg-6 d-flex justify-content-center"><label for="input"><input type="text" placeholder="Enter Question Here..." class="form1 input"></label></div><div class="col-lg-6 d-flex justify-content-center"><input type="text" placeholder="Enter Answer Here..." class="form2 input"></div></div></div>'
 
 var addInputField = document.getElementById('addInputField');
+var newInput = document.getElementById('newInput');
 
 addInputField.addEventListener('click', function() {
-  textOnCard.insertAdjacentHTML("afterend",inputHtml)
+  newInput.insertAdjacentHTML("afterend",inputHtml)
 });

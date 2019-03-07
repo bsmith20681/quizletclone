@@ -2,8 +2,8 @@
   perspective:150rem;
   -moz-perspective:150rem;
   position: relative;
-  height: 15rem;
-  width:25rem;
+  height: 20rem;
+  width:33rem;
   transform-style: preserve-3d;
   transition: transform 0.8s;
 
@@ -14,7 +14,7 @@
 
   &__side{
     background-color: $color-white;
-    height: 15rem;
+    height: 20rem;
     border: 1px solid black;
     width: 100%;
     transition: all .8s ease;

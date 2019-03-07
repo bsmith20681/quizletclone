@@ -5,15 +5,15 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 15rem;
-  width: 25rem;
+  height: 20rem;
+  width: 33rem;
   transform-style: preserve-3d;
   transition: transform 0.8s; }
   .flashcard.flip {
     transform: rotateY(180deg); }
   .flashcard__side {
     background-color: #fff;
-    height: 15rem;
+    height: 20rem;
     border: 1px solid black;
     width: 100%;
     transition: all .8s ease;
@@ -26,5 +26,18 @@ body {
     .flashcard__side--back {
       background-color: #fff;
       transform: rotateY(180deg); }
+
+.input {
+  border: none;
+  width: 30rem;
+  height: 2.5rem;
+  outline: none;
+  background: white;
+  color: black;
+  font-size: 18px;
+  border-bottom: 2px solid black;
+  margin: 2rem; }
+  .input-box {
+    background: white; }
 
 /*# sourceMappingURL=mains.css.map */
