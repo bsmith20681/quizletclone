@@ -6,10 +6,16 @@
   width:33rem;
   transform-style: preserve-3d;
   transition: transform 0.8s;
+  -webkit-box-shadow: 10px 10px 9px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 9px -8px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 9px -8px rgba(0,0,0,0.75);
 
 
   &.flip{
     transform: rotateY(180deg);
+    -webkit-box-shadow: -11px 10px 9px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: -11px 10px 9px -8px rgba(0,0,0,0.75);
+  box-shadow: -11px 10px 9px -8px rgba(0,0,0,0.75);
   }
 
   &__side{

@@ -25,8 +25,18 @@ $(textOnCard).on('click', function(){
     var input2 = document.querySelectorAll('.form2');
     var flashcardFront = Array.from(input1);
     var flashcardBack = Array.from(input2);
-    document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
-    document.getElementById('flashcard__back').innerHTML = flashcardBack[number].value;
+
+
+    for (var i=0; i < flashcardFront.length; i++){
+      if(flashcardFront[i].value === ""){
+        alert('You left a field blank!')
+      } else {
+        document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
+        document.getElementById('flashcard__back').innerHTML = flashcardBack[number].value;
+      }
+    }
+
+
       rightArrow.addEventListener('click', function(){
         number++
         document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
