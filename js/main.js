@@ -38,22 +38,36 @@ $(textOnCard).on('click', function(){
 
 
       rightArrow.addEventListener('click', function(){
-        number++
+        if (number >= flashcardFront.length -1){
+          number = 0
+        } else {
+          number ++
+        }
+        console.log(number);
+
         document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
         document.getElementById('flashcard__back').innerHTML = flashcardBack[number].value;
-        console.log(number)
+
+
       });
       leftArrow.addEventListener('click', function(){
-        number--
+        if (number == 0){
+          number = flashcardFront.length - 1
+        } else {
+          number--
+        }
+
         document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
         document.getElementById('flashcard__back').innerHTML = flashcardBack[number].value;
-        console.log(number)
+
+        console.log(number);
+
       });
 });
 
 
 //CREATES A NEW INPUT FIELD
-var inputHtml = '<div class="container mt-5"><div class="row input-box"><div class="col-lg-6 d-flex justify-content-center"><label for="input"><input type="text" placeholder="Enter Question Here..." class="form1 input"></label></div><div class="col-lg-6 d-flex justify-content-center"><input type="text" placeholder="Enter Answer Here..." class="form2 input"></div></div></div>'
+var inputHtml = '<div class="container mt-5"><div class="row input-box"><div class="col-lg-6 d-flex justify-content-center"><input type="text" placeholder="Enter Question Here..." class="form1 input"></div><div class="col-lg-6 d-flex justify-content-center"><input type="text" placeholder="Enter Answer Here..." class="form2 input"></div></div></div>'
 
 var addInputField = document.getElementById('addInputField');
 var newInput = document.getElementById('newInput');
