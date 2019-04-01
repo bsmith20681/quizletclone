@@ -37,32 +37,48 @@ $(textOnCard).on('click', function(){
     }
 
 
-      rightArrow.addEventListener('click', function(){
-        if (number >= flashcardFront.length -1){
-          number = 0
-        } else {
-          number ++
+// RIGHT ARROW FUNTCIONS
+    function rightArrowAdd() {
+      if (number >= flashcardFront.length -1){
+        number = 0
+      } else {
+        number ++
+      }
+      console.log(number);
+      document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
+      document.getElementById('flashcard__back').innerHTML = flashcardBack[number].value;
+    };
+
+
+      rightArrow.addEventListener('click', rightArrowAdd);
+
+      document.addEventListener('keyup', function(event){
+        if (event.keyCode === 39 || event.which === 39) {
+          rightArrowAdd();
         }
-        console.log(number);
-
-        document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
-        document.getElementById('flashcard__back').innerHTML = flashcardBack[number].value;
-
-
       });
-      leftArrow.addEventListener('click', function(){
-        if (number == 0){
-          number = flashcardFront.length - 1
-        } else {
-          number--
-        }
 
-        document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
-        document.getElementById('flashcard__back').innerHTML = flashcardBack[number].value;
 
-        console.log(number);
 
-      });
+//LEFT ARROW FUNCTIONS
+    function leftArrowAdd() {
+      if (number == 0){
+        number = flashcardFront.length - 1
+      } else {
+        number--
+      }
+      document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
+      document.getElementById('flashcard__back').innerHTML = flashcardBack[number].value;
+      console.log(number);
+    };
+
+    leftArrow.addEventListener('click', leftArrowAdd);
+    document.addEventListener('keyup', function(event){
+      if (event.keyCode === 37 || event.which === 37) {
+        leftArrowAdd();
+      }
+    });
+
 });
 
 
@@ -73,5 +89,5 @@ var addInputField = document.getElementById('addInputField');
 var newInput = document.getElementById('newInput');
 
 addInputField.addEventListener('click', function() {
-  newInput.insertAdjacentHTML("afterend",inputHtml)
+  newInput.insertAdjacentHTML("beforebegin", inputHtml)
 });
