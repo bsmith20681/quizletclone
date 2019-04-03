@@ -27,6 +27,15 @@ $(textOnCard).on('click', function(){
     var flashcardBack = Array.from(input2);
 
 
+
+    function cardIndex() {
+      var cardIndex = (number + 1) + "/" + flashcardFront.length
+      document.getElementById('cardIndex').innerHTML = cardIndex
+    };
+
+    cardIndex();
+
+
     for (var i=0; i < flashcardFront.length; i++){
       if(flashcardFront[i].value === ""){
         alert('You left a field blank!')
@@ -47,11 +56,13 @@ $(textOnCard).on('click', function(){
       console.log(number);
       document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
       document.getElementById('flashcard__back').innerHTML = flashcardBack[number].value;
+
+
+      cardIndex();
     };
 
 
       rightArrow.addEventListener('click', rightArrowAdd);
-
       document.addEventListener('keyup', function(event){
         if (event.keyCode === 39 || event.which === 39) {
           rightArrowAdd();
@@ -70,6 +81,8 @@ $(textOnCard).on('click', function(){
       document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
       document.getElementById('flashcard__back').innerHTML = flashcardBack[number].value;
       console.log(number);
+
+      cardIndex();
     };
 
     leftArrow.addEventListener('click', leftArrowAdd);
