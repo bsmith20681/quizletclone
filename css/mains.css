@@ -1,4 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+.move-left {
+  transform: rotateY(130deg) translate(-200px, 0);
+  transition: 0.2s transform; }
+
+.move-right {
+  transform: rotateY(130deg) translate(200px, 0);
+  transition: 0.2s transform; }
+
+.fade-in {
+  animation: fadeIn 2s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.fade-out {
+  animation: fadeOut .2s; }
+
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 body {
   background: #F0F0F0;
   font-family: 'Roboto', sans-serif; }
@@ -37,7 +61,7 @@ body {
   -moz-box-shadow: 10px 10px 9px -8px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 9px -8px rgba(0, 0, 0, 0.75); }
   .flashcard.flip {
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
     -webkit-box-shadow: -11px 10px 9px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -11px 10px 9px -8px rgba(0, 0, 0, 0.75);
     box-shadow: -11px 10px 9px -8px rgba(0, 0, 0, 0.75); }
@@ -55,7 +79,7 @@ body {
       background-color: #fff; }
     .flashcard__side--back {
       background-color: #fff;
-      transform: rotateY(180deg); }
+      transform: rotateX(180deg); }
 
 .input {
   border: none;

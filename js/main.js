@@ -54,8 +54,15 @@ $(textOnCard).on('click', function(){
         number ++
       }
       console.log(number);
-      document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
-      document.getElementById('flashcard__back').innerHTML = flashcardBack[number].value;
+
+      flashcard.classList.add('fade-out','move-left')
+      setTimeout(function() {
+        document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
+        document.getElementById('flashcard__back').innerHTML = flashcardBack[number].value;
+        flashcard.classList.remove('fade-out', 'move-left')
+      }, 200);
+
+
 
 
       cardIndex();
@@ -78,8 +85,15 @@ $(textOnCard).on('click', function(){
       } else {
         number--
       }
-      document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
-      document.getElementById('flashcard__back').innerHTML = flashcardBack[number].value;
+
+      flashcard.classList.add('fade-out','move-right')
+      setTimeout(function() {
+        document.getElementById('flashcard__front').innerHTML = flashcardFront[number].value;
+        document.getElementById('flashcard__back').innerHTML = flashcardBack[number].value;
+        flashcard.classList.remove('fade-out', 'move-right')
+      }, 200);
+
+
       console.log(number);
 
       cardIndex();
