@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 .move-left {
-  transform: rotateY(130deg) translate(-200px, 0);
+  transform: rotateY(90deg) translate(-200px, 0);
   transition: 0.2s transform; }
 
 .move-right {
-  transform: rotateY(130deg) translate(200px, 0);
+  transform: rotateY(90deg) translate(200px, 0);
   transition: 0.2s transform; }
 
 .fade-in {
@@ -39,6 +39,9 @@ body {
 .btn-blue {
   background-color: #3ccfcf; }
 
+.btn-purple {
+  background-color: #8980F5; }
+
 .btn-transparent {
   background-color: #fff;
   color: #000;
@@ -62,9 +65,9 @@ body {
   box-shadow: 10px 10px 9px -8px rgba(0, 0, 0, 0.75); }
   .flashcard.flip {
     transform: rotateX(180deg);
-    -webkit-box-shadow: -11px 10px 9px -8px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -11px 10px 9px -8px rgba(0, 0, 0, 0.75);
-    box-shadow: -11px 10px 9px -8px rgba(0, 0, 0, 0.75); }
+    -webkit-box-shadow: -10px -10px -9px 8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px -9px 8px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px -9px 8px rgba(0, 0, 0, 0.75); }
   .flashcard__side {
     background-color: #fff;
     height: 20rem;

@@ -1,10 +1,10 @@
 .move-left {
-  transform: rotateY(130deg) translate(-200px,0);
+  transform: rotateY(90deg) translate(-200px,0);
   transition: 0.2s transform;
 }
 
 .move-right {
-  transform: rotateY(130deg) translate(200px,0);
+  transform: rotateY(90deg) translate(200px,0);
   transition: 0.2s transform;
 }
 
