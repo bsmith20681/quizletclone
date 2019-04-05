@@ -97,7 +97,7 @@ body {
   .input-box {
     background: white; }
 
-.icon {
+.icon-arrow {
   background-color: #fff;
   padding: 20px;
   width: 70px;
@@ -110,10 +110,18 @@ body {
   -moz-box-shadow: 3px 5px 11px -4px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 5px 11px -4px rgba(0, 0, 0, 0.75); }
 
-.icon:hover {
+.icon-arrow:hover {
   -webkit-box-shadow: 7px 8px 23px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 7px 8px 23px -4px rgba(0, 0, 0, 0.75);
   box-shadow: 7px 8px 23px -4px rgba(0, 0, 0, 0.75); }
+
+.icon-delete {
+  font-size: 25px;
+  margin-top: 40px; }
+
+.icon-delete:hover {
+  color: red;
+  cursor: pointer; }
 
 .nav {
   background-color: #4257B2; }
