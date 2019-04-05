@@ -109,25 +109,24 @@ $(textOnCard).on('click', function(){
 });
 
 //CREATES A NEW INPUT FIELD
+
 var inputHtml = '<div class="container mt-5"><div class="row input-box"><div class="col-lg-6 d-flex justify-content-center"><input type="text" placeholder="Enter Question Here..." class="form1 input"></div><div class="col-lg-6 d-flex justify-content-center"><input type="text" placeholder="Enter Answer Here..." class="form2 input"><i class="fas fa-trash icon-delete" id="delete-input"></i></div></div></div>'
 
-$(addInputField).click(function(){
-  var inputHtml = '<div class="container mt-5"><div class="row input-box"><div class="col-lg-6 d-flex justify-content-center"><input type="text" placeholder="Enter Question Here..." class="form1 input"></div><div class="col-lg-6 d-flex justify-content-center"><input type="text" placeholder="Enter Answer Here..." class="form2 input"><i class="fas fa-trash icon-delete" id="delete-input"></i></div></div></div>'
+var addInputField = document.getElementById('addInputField');
+var newInput = document.getElementById('newInput');
 
-  var addInputField = document.getElementById('addInputField');
-  var newInput = document.getElementById('newInput');
-
-
+addInputField.addEventListener('click', function() {
   newInput.insertAdjacentHTML("beforebegin", inputHtml)
-
-})
-
-var deleteInput = document.getElementById('delete-input');
-
-
-$('body').on('click', '#delete-input', function(){
-  var inputBox = document.querySelector('.input-box')
-  var parent = inputBox.parentNode;
-  console.log('i am being deleted')
-  parent.removeChild(inputBox);
 });
+
+
+
+  var deleteInput = document.getElementById('delete-input');
+
+
+  $('body').on('click', '#delete-input', function(){
+    var inputBox = document.querySelector('.input-box')
+    var parent = inputBox.parentNode;
+    console.log('i am being deleted')
+    parent.removeChild(inputBox);
+  });
