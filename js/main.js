@@ -123,10 +123,16 @@ addInputField.addEventListener('click', function() {
 
   var deleteInput = document.getElementById('delete-input');
 
-
-  $('body').on('click', '#delete-input', function(){
+/*
+  $('body').on('click', '#delete-input', function(e){
     var inputBox = document.querySelector('.input-box')
-    var parent = inputBox.parentNode;
-    console.log('i am being deleted')
-    parent.removeChild(inputBox);
-  });
+    var test = document.querySelector('.test')
+    //console.log('i am being deleted')
+    e.target.parentNode.parentNode.parentNode.removeChild(inputBox);
+    console.log(e.target.parentNode.parentNode.parentNode)
+  });*/
+
+
+$('body').on('click', '#delete-input', function(e){
+  $(e.target.parentNode.parentNode).remove();
+})
