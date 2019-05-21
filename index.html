@@ -18,6 +18,7 @@
         <a href="/index.html" class="navbar-brand text-white">Quizlet Clone</a>
       </div>
       <div class="col-lg-4">
+        <button class="btn btn-green" data-toggle="modal" data-target="#modal">About This App</button>
         <button class="btn btn-blue " id="btn">Create Cards</button>
       </div>
     </div>
@@ -83,7 +84,23 @@
   </div>
 </div>
 
+<!-- MODAL -->
 
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">About This App</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Quizlet Clone is a study app that allows for someone to create multiple flashcards to help learn something new. This app is inspired by <a href="https://www.quizlet.com">quizlet.com</a>. Simple enter a question and answer and it will appear on the front and the back. In order to see the back, simple click on the card. If you want to see your next simple click on the arrows. Finally, in order to delete a field click the trash can and then click on create cards again!</p>
+      </div>
+    </div>
+  </div>
+</div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

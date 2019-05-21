@@ -13,7 +13,6 @@ flashcard.addEventListener('click', function() {
 
 //TAKE DATA FROM INPUT FIELDS, CONVERT FROM NODE LIST TO ARRAY, HAVE THEM DISPLAYED ON SCREEN ONE AT A TIME
 
-var number = 0;
 
 var rightArrow = document.getElementById('rightArrow');
 var leftArrow = document.getElementById('leftArrow');
@@ -26,6 +25,8 @@ $(textOnCard).on('click', function(){
     var flashcardFront = Array.from(input1);
     var flashcardBack = Array.from(input2);
 
+    var number = 0;
+
 
 
     function cardIndex() {
@@ -35,6 +36,19 @@ $(textOnCard).on('click', function(){
 
     cardIndex();
 
+    var deleteInput = document.getElementById('delete-input');
+
+    $('body').on('click', '#delete-input', function(e){
+      $(e.target.parentNode.parentNode).remove();
+      flashcardFront.slice(e);
+      console.log(number)
+      var flashcardFront = Array.from(input1);
+      
+    })
+
+    console.log(flashcardFront);
+
+//VALIDATION FOR EMPTY CARD
 
     for (var i=0; i < flashcardFront.length; i++){
       if(flashcardFront[i].value === ""){
@@ -119,10 +133,4 @@ addInputField.addEventListener('click', function() {
   newInput.insertAdjacentHTML("beforebegin", inputHtml)
 });
 
-
-
-var deleteInput = document.getElementById('delete-input');
-
-$('body').on('click', '#delete-input', function(e){
-  $(e.target.parentNode.parentNode).remove();
-})
+//DELETES FIELD
